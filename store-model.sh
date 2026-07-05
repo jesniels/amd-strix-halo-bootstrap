@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
+
 MOUNT_POINT="/mnt/nas_models"
 LOCAL_MODELS="$HOME/models"
 
