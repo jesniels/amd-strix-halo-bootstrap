@@ -10,8 +10,9 @@
 #--jinja \
 #-ctk q8_0 -ctv q8_0
 
+
 llama-server \
-  -m models/qwen3.6-q4/Qwen3.6-35B-A3B-UD-Q4_K_XL.gguf \
+  -m ~/models/qwen3.6-q4/Qwen3.6-35B-A3B-UD-Q4_K_XL.gguf \
   --host 0.0.0.0 \
   --port 8080 \
   -c 65536 \
@@ -20,8 +21,7 @@ llama-server \
   --threads 16 \
   --threads-batch 16 \
   -ngl 999 \
-  --flash-attn \
-  -fa 1 \
+  -fa on \
   -ctk q8_0 \
   -ctv q8_0 \
   --jinja \
