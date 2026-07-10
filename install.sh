@@ -28,7 +28,13 @@ for i in "${!steps[@]}"; do
   name=$(basename "$script" .sh | tr '-' ' ')
   echo ""
   echo "[$step_num/$total] $name"
-  bash "$script"
+  if [[ "${steps[$i]}" == "path-setup.sh" ]]; then
+    # Source instead of bash so PATH exports affect the current shell
+    # shellcheck source=scripts/path-setup.sh
+    . "$script"
+  else
+    bash "$script"
+  fi
 done
 
 echo ""
