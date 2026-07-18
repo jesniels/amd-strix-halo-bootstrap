@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-SCRIPT_DIR="$(dirname "$(realpath "$0")")"
+SCRIPT_DIR="$(dirname "$(realpath "${BASH_SOURCE[0]}")")"
 source "$SCRIPT_DIR/config.sh"
 
 # Persistent credentials file — survives reboots (unlike /run which is tmpfs)

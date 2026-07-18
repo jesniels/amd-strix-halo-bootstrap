@@ -3,7 +3,7 @@ set -euo pipefail
 
 echo "== Strix Halo bootstrap installer =="
 
-SCRIPT_DIR="$(dirname "$(realpath "$0")")"
+SCRIPT_DIR="$(dirname "$(realpath "${BASH_SOURCE[0]}")")"
 
 ########################################
 # Steps — add or reorder here to change
@@ -12,10 +12,13 @@ SCRIPT_DIR="$(dirname "$(realpath "$0")")"
 steps=(
   "python.sh"
   "base-dependencies.sh"
+  "nodejs.sh"
+  "pi-coding.sh"
   "huggingface.sh"
   "toolbox-repo.sh"
   "kernel-parameters.sh"
   "models-directory.sh"
+  "models-json.sh"
   "path-setup.sh"
   "nas-setup.sh"
 )
