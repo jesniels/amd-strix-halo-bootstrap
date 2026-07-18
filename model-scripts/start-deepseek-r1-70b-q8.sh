@@ -1,8 +1,8 @@
 llama-server \
-  -m ~/models/qwen3-235b-thinking-q4/Qwen3-235B-A22B-Thinking-2507-UD-Q4_K_XL-00001-of-00003.gguf \
+  -m ~/models/deepseek-r1-70b-q8/DeepSeek-R1-Distill-Llama-70B-Q8_0-00001-of-00002.gguf \
   --host 0.0.0.0 \
   --port 8080 \
-  -c 250000 \
+  -c 150000 \
   --threads 16 \
   --threads-batch 16 \
   -ngl 999 \
@@ -11,9 +11,10 @@ llama-server \
   --cache-type-k q8_0 \
   --cache-type-v q8_0 \
   --mlock \
+  --no-mmap \
   -t 16 \
-  --cache-ram 32768 \
+  --cache-ram 24576 \
   --cache-reuse 256 \
   --no-context-shift \
-  -b 8192 \
-  --ubatch-size 4096
+  -b 4096 \
+  --ubatch-size 2048

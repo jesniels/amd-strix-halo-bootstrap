@@ -1,5 +1,5 @@
 llama-server \
-  -m ~/models/qwen3-235b-thinking-q8/Qwen3-235B-A22B-Thinking-2507-UD-Q8_K_XL.gguf \
+  -m ~/models/qwen3-235b-thinking-q8/Qwen3-235B-A22B-Thinking-2507-UD-Q8_K_XL-00001-of-00006.gguf \
   --host 0.0.0.0 \
   --port 8080 \
   -c 200000 \
