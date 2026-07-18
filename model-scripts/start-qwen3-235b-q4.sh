@@ -1,0 +1,19 @@
+llama-server \
+  -m ~/models/qwen3-235b-thinking-q4/Qwen3-235B-A22B-Thinking-2507-UD-Q4_K_XL.gguf \
+  --host 0.0.0.0 \
+  --port 8080 \
+  -c 250000 \
+  --threads 16 \
+  --threads-batch 16 \
+  -ngl 999 \
+  -fa on \
+  --jinja \
+  --cache-type-k q8_0 \
+  --cache-type-v q8_0 \
+  --mlock \
+  -t 16 \
+  --cache-ram 32768 \
+  --cache-reuse 256 \
+  --no-context-shift \
+  -b 8192 \
+  --ubatch-size 4096

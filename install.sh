@@ -10,8 +10,9 @@ SCRIPT_DIR="$(dirname "$(realpath "${BASH_SOURCE[0]}")")"
 # what install.sh runs and in what order.
 ########################################
 steps=(
-  "python.sh"
+  "git.sh"
   "base-dependencies.sh"
+  "python.sh"
   "nodejs.sh"
   "pi-coding.sh"
   "huggingface.sh"
