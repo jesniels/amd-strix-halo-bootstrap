@@ -7,5 +7,6 @@ NAS_SHARE="//nas10.afdata/Models"
 NAS_USER="jesniels"
 
 LOCAL_MODELS="$HOME/models"
-REPO_DIR="$HOME/amd-strix-halo-toolboxes"
+AMD_REPO_DIR="$HOME/amd-strix-halo-toolboxes"
+DS4_REPO_DIR="$HOME/ds4-strix-halo-toolboxes"
 BOOTSTRAP_DIR="$HOME/amd-strix-halo-bootstrap"
