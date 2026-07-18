@@ -14,7 +14,7 @@ llama-server \
   -t 16 \
   --cache-ram 32768 \
   --cache-reuse 256 \
-  --no-context-shift
+  --no-context-shift \
   -b 8192 --ubatch-size 4096 
 
 # Adjust for this if VRAM crashed:
